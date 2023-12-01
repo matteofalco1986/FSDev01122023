@@ -10,6 +10,7 @@
 }
 
 body {
+    font-family: $fontFamily;
     background-color: $backgroundMain;
     color: $textColorLight;
     font-size: $fontSize;
@@ -25,21 +26,20 @@ li {
     list-style: none;
 }
 
+#logo {
+    width: $widthLogoStatic;
+
+    @media (min-width:992px) {
+        width: $widthLogo;
+        height: auto;
+        margin-right: $logoDistance;
+    }
+}
+
 .navbar {
     margin-bottom: $topComponentsDistance;
     padding: 0;
     background-color: $backgroundMain !important;
-
-    .container-fluid {
-        #logo {
-            width: $widthLogoStatic;
-            @media (min-width:992px){
-                width: $widthLogo;
-                height: auto;
-                margin-right: $logoDistance;
-            }
-        }
-    }
 
     .d-flex {
         * {
@@ -155,48 +155,138 @@ main {
 
 // ---------------- FOOTER ------------------------
 
-#footerContainer {
+#toCenter {
     gap: 20px;
     color: $textColorDark;
-    
+
     div {
-        
+
         p,
         address {
             margin-bottom: 0;
             font-size: $fontSize*0.8;
         }
     }
-    
+
     #socialLogos {
         gap: 20px;
     }
-    
+
     #footerInfo {
         gap: 30px;
-        
+
         * {
             gap: 10px;
             text-decoration: none;
             color: $textColorDark;
         }
     }
-    
+
     .serviceCode {
         display: inline-block;
         border: 1px solid $textColorDark;
         padding: 5px 10px;
-        
+
         &:hover {
             color: $textColorLight;
             cursor: pointer;
         }
     }
-    
-    @media screen and (min-width: 992px) {
-        margin-left: 25vw;
-    };
-    @media screen and (min-width: 1400px) {
-        margin: 0 25vw;
-    };
+}
+
+
+// ----------------------- EDIT PROFILE PAGE ------------------------
+
+.pageTwoContainer {
+    h1 {
+        font-weight: 400;
+        font-size: $fontSize*3;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: $fontSize;
+        color: $textColorDark;
+    }
+
+}
+
+.formContent {
+    gap: 20px;
+    padding-bottom: $topComponentsDistance*1.2;
+    border-bottom: 1px solid $textColorDark;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.profileContent {
+    div {
+        &:nth-child(1){
+            padding-bottom: $topComponentsDistance*1.2;
+            border-bottom: 1px solid $textColorDark;
+        }
+        &:nth-child(2){
+            padding: $topComponentsDistance*1.2 0;
+            border-bottom: 1px solid $textColorDark;
+        }
+        &:nth-child(3){
+            padding: 0;
+            margin: 0;
+        }
+        .profileName {
+            background-color: $backgroundTextForm;
+            color: $textColorLight;
+            border: none;
+            width: 100%;
+            padding: 5px 10px;
+            margin-bottom: $formContentMargin;
+        }
+
+        .dropdown {
+            button {
+                color: $textColorLight;
+                border: 1px solid $textColorLight;
+                border-radius: 0;
+            }
+        }
+
+        .special {
+            display: inline-block;
+            background-color: $backgroundBrightText;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        span {
+            font-weight: bold;
+            color: $textColorLight;
+        }
+
+        .align {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .checkboxForm {
+            padding: 0;
+            border: none;
+        }
+    }
+}
+
+#lastDiv {
+    padding-top: $topComponentsDistance*1.2;
+}
+.buttons {
+    gap: 20px;
+    padding-top: $topComponentsDistance*1.2;
+    button{
+        @include buttonFormat;
+    }
+}
+.btn-dark {
+    @include buttonFormat;
+    padding: 5px 30px;
 }

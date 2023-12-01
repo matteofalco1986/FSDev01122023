@@ -5,7 +5,10 @@ $textColorBright: #FBFBFB;
 $textColorDark: #797979;
 $backgroundMain: #141414;
 $backgroundMainHover: #272727;
+$backgroundTextForm: #666666;
+$backgroundBrightText :#333333;
 $fontSize: 1rem;
+$fontFamily: Arial, Helvetica, sans-serif;
 $widthLogoStatic: 300px;
 $widthLogo: 10%;
 $widthIcons: 30px;
@@ -13,3 +16,16 @@ $logoDistance: 20px;
 $topComponentsDistance: 30px;
 $bottomComponentsDistance: 80px;
 $imagesPerRow: 6;
+$formContentMargin: 20px;
+
+@mixin buttonFormat {
+    background: none;
+    border: 1px solid $textColorDark;
+    color: $textColorDark;
+    flex-grow: 1;
+    border-radius: 0;
+    &:hover{
+        background: $textColorLight;
+        color: $backgroundMain;
+    }
+}
