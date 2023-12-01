@@ -12,6 +12,7 @@
 body {
     background-color: $backgroundMain;
     color: $textColorLight;
+    font-size: $fontSize;
 }
 
 .pageContainer {
@@ -25,7 +26,10 @@ li {
 }
 
 .navbar {
+    margin-bottom: $topComponentsDistance;
+    padding: 0;
     background-color: $backgroundMain !important;
+
     .container-fluid {
         #logo {
             width: $widthLogo;
@@ -33,74 +37,156 @@ li {
             margin-right: $logoDistance;
         }
     }
+
     .d-flex {
         * {
             cursor: pointer;
         }
-        p{
+
+        p {
             margin: 0;
         }
+
         align-items: center;
         gap: 20px;
     }
+
     li {
         a {
             color: $textColorLight !important;
         }
     }
-    button{
+
+    button {
         margin-right: 3vw !important;
+
         &::after {
             color: $textColorLight;
         }
+
         img {
             width: $widthIcons;
         }
-    
+
     }
-    ul{
+
+    ul {
         background-color: $backgroundMain;
-        li{
+
+        li {
             img {
                 width: $widthIcons*2.5;
             }
-            img:hover{
+
+            img:hover {
                 background-color: $backgroundMainHover;
                 cursor: pointer;
             }
-        } 
+        }
     }
 }
 
 // ---------------- HEADER ------------------------
 
 header {
-    > * {
+    margin-bottom: $topComponentsDistance;
+
+    >* {
         color: $textColorBright !important;
     }
+
     .d-flex {
         align-items: center;
         background-color: $backgroundMain;
         gap: $logoDistance;
+
+        h1 {
+            font-size: $fontSize*2.5;
+        }
+
         button {
             color: $textColorLight !important;
             border: 1px solid $textColorLight;
             border-radius: 0;
             width: 130%;
         }
+
         .sideIcons {
             gap: 0;
             width: 140%;
             height: auto;
+
             svg {
                 width: 40%;
                 height: auto;
                 padding: 8px;
                 border: 1px solid $textColorLight;
-                &:hover{
+
+                &:hover {
                     cursor: pointer;
                 }
             }
         }
     }
+}
+
+// ---------------- MAIN ------------------------
+
+main {
+    margin-bottom: $bottomComponentsDistance;
+}
+
+.filmImage {
+    width: 100%;
+}
+
+.filmRow {
+    margin-bottom: $logoDistance;
+
+    .container-fluid {
+        h2 {
+            font-size: $fontSize*1.5;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// ---------------- FOOTER ------------------------
+
+#footerContainer {
+    margin-left: 30vw;
+    gap: 20px;
+    color: $textColorDark;
+    
+    div {
+        
+        p,
+        address {
+            margin-bottom: 0;
+            font-size: $fontSize*0.8;
+        }
+    }
+    
+    #socialLogos {
+        gap: 20px;
+    }
+    
+    #footerInfo {
+        gap: 30px;
+        * {
+            gap: 10px;
+            text-decoration: none;
+            color: $textColorDark;
+        }
+    }
+    .serviceCode {
+        display: inline-block;
+        border: 1px solid $textColorDark;
+        padding: 5px 10px;
+        &:hover {
+            color: $textColorLight;
+            cursor: pointer;
+        }
+    }
+
 }
