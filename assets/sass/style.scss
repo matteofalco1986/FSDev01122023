@@ -122,7 +122,7 @@ header {
                 width: 40%;
                 height: auto;
                 padding: 8px;
-                border: 1px solid $textColorDark;
+                border: 1px solid $textColorLight;
 
                 &:hover {
                     cursor: pointer;
@@ -228,17 +228,17 @@ main {
             padding-bottom: $topComponentsDistance*1.2;
             border-bottom: 1px solid $textColorDark;
         }
-
+        
         &:nth-child(2) {
             padding: $topComponentsDistance*1.2 0;
             border-bottom: 1px solid $textColorDark;
         }
-
+        
         &:nth-child(3) {
             padding: 0;
             margin: 0;
         }
-
+        
         .profileName {
             background-color: $backgroundTextForm;
             color: $textColorLight;
@@ -247,39 +247,49 @@ main {
             padding: 5px 10px;
             margin-bottom: $formContentMargin;
         }
-
-
-
+        
+        .dropdown {
+            ul {
+                border: none;
+                background-color: $backgroundMain;
+                opacity: 0.9;
+                li {
+                    a {
+                        @include dropDownMenu;
+                    }
+                }
+            }
+        
         button {
             color: $textColorLight;
             border: 1px solid $textColorLight;
             border-radius: 0;
         }
     }
-
+    
     .special {
         display: inline-block;
         background-color: $backgroundBrightText;
         padding: 5px 10px;
         font-weight: bold;
     }
-
+    
     span {
         font-weight: bold;
         color: $textColorLight;
     }
-
+    
     .align {
         display: inline-block;
         margin: 0;
     }
-
+    
     .checkboxForm {
         padding: 0;
         border: none;
     }
 }
-
+}
 
 #lastDiv {
     padding-top: $topComponentsDistance*1.2;
@@ -288,7 +298,7 @@ main {
 .buttons {
     gap: 20px;
     padding-top: $topComponentsDistance*1.2;
-
+    
     button {
         @include buttonFormat;
     }
@@ -301,6 +311,7 @@ main {
 
 .dropdown {
     ul {
+        border: none;
         background-color: $backgroundMain;
         opacity: 0.9;
         li {
