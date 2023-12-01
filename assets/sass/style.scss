@@ -32,9 +32,12 @@ li {
 
     .container-fluid {
         #logo {
-            width: $widthLogo;
-            height: auto;
-            margin-right: $logoDistance;
+            width: $widthLogoStatic;
+            @media (min-width:992px){
+                width: $widthLogo;
+                height: auto;
+                margin-right: $logoDistance;
+            }
         }
     }
 
@@ -58,7 +61,6 @@ li {
     }
 
     button {
-        margin-right: 3vw !important;
 
         &::after {
             color: $textColorLight;
@@ -154,7 +156,6 @@ main {
 // ---------------- FOOTER ------------------------
 
 #footerContainer {
-    margin-left: 30vw;
     gap: 20px;
     color: $textColorDark;
     
@@ -173,20 +174,29 @@ main {
     
     #footerInfo {
         gap: 30px;
+        
         * {
             gap: 10px;
             text-decoration: none;
             color: $textColorDark;
         }
     }
+    
     .serviceCode {
         display: inline-block;
         border: 1px solid $textColorDark;
         padding: 5px 10px;
+        
         &:hover {
             color: $textColorLight;
             cursor: pointer;
         }
     }
-
+    
+    @media screen and (min-width: 992px) {
+        margin-left: 25vw;
+    };
+    @media screen and (min-width: 1400px) {
+        margin: 0 25vw;
+    };
 }
