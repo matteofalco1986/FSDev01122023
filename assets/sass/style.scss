@@ -1,5 +1,7 @@
+// Imports
 @import "abstract/variables";
-@import "bootstrap/bootstrap.scss";
+
+// Generic
 
 *,
 * ::after,
@@ -7,3 +9,98 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: $backgroundMain;
+    color: $textColorLight;
+}
+
+.pageContainer {
+    padding: 30px;
+}
+
+// ------------------ NAVBAR ------------------------
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    background-color: $backgroundMain !important;
+    .container-fluid {
+        #logo {
+            width: $widthLogo;
+            height: auto;
+            margin-right: $logoDistance;
+        }
+    }
+    .d-flex {
+        * {
+            cursor: pointer;
+        }
+        p{
+            margin: 0;
+        }
+        align-items: center;
+        gap: 20px;
+    }
+    li {
+        a {
+            color: $textColorLight !important;
+        }
+    }
+    button{
+        margin-right: 3vw !important;
+        &::after {
+            color: $textColorLight;
+        }
+        img {
+            width: $widthIcons;
+        }
+    
+    }
+    ul{
+        background-color: $backgroundMain;
+        li{
+            img {
+                width: $widthIcons*2.5;
+            }
+            img:hover{
+                background-color: $backgroundMainHover;
+                cursor: pointer;
+            }
+        } 
+    }
+}
+
+// ---------------- HEADER ------------------------
+
+header {
+    > * {
+        color: $textColorBright !important;
+    }
+    .d-flex {
+        align-items: center;
+        background-color: $backgroundMain;
+        gap: $logoDistance;
+        button {
+            color: $textColorLight !important;
+            border: 1px solid $textColorLight;
+            border-radius: 0;
+            width: 130%;
+        }
+        .sideIcons {
+            gap: 0;
+            width: 140%;
+            height: auto;
+            svg {
+                width: 40%;
+                height: auto;
+                padding: 8px;
+                border: 1px solid $textColorLight;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
