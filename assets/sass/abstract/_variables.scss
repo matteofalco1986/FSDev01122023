@@ -29,3 +29,11 @@ $formContentMargin: 20px;
         color: $backgroundMain;
     }
 }
+
+@mixin dropDownMenu {
+    color: $textColorDark;
+    &:hover {
+        color: $textColorLight;
+        background-color: $backgroundMainHover;
+    }
+}

@@ -122,7 +122,7 @@ header {
                 width: 40%;
                 height: auto;
                 padding: 8px;
-                border: 1px solid $textColorLight;
+                border: 1px solid $textColorDark;
 
                 &:hover {
                     cursor: pointer;
@@ -215,6 +215,7 @@ main {
     gap: 20px;
     padding-bottom: $topComponentsDistance*1.2;
     border-bottom: 1px solid $textColorDark;
+
     img {
         width: 100px;
         height: 100px;
@@ -223,18 +224,21 @@ main {
 
 .profileContent {
     div {
-        &:nth-child(1){
+        &:nth-child(1) {
             padding-bottom: $topComponentsDistance*1.2;
             border-bottom: 1px solid $textColorDark;
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             padding: $topComponentsDistance*1.2 0;
             border-bottom: 1px solid $textColorDark;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             padding: 0;
             margin: 0;
         }
+
         .profileName {
             background-color: $backgroundTextForm;
             color: $textColorLight;
@@ -245,6 +249,17 @@ main {
         }
 
         .dropdown {
+            ul {
+                border-radius: 0;
+                border: 1px solid $textColorDark;
+                background-color: $backgroundMain;
+                li {
+                    a {
+                        @include dropDownMenu;
+                    }
+                }
+            }
+
             button {
                 color: $textColorLight;
                 border: 1px solid $textColorLight;
@@ -279,13 +294,16 @@ main {
 #lastDiv {
     padding-top: $topComponentsDistance*1.2;
 }
+
 .buttons {
     gap: 20px;
     padding-top: $topComponentsDistance*1.2;
-    button{
+
+    button {
         @include buttonFormat;
     }
 }
+
 .btn-dark {
     @include buttonFormat;
     padding: 5px 30px;
