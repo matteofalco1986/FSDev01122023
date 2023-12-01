@@ -1,0 +1,9 @@
+@import "abstract/variables";
+@import "bootstrap/bootstrap.scss";
+
+*,
+* ::after,
+* ::before {
+    box-sizing: border-box;
+}
+
