@@ -36,6 +36,13 @@ li {
     }
 }
 
+#pageTwo {
+    #logo {
+        width: $widthLogoStatic/2;
+        margin: 30px;
+    }
+}
+
 .navbar {
     margin-bottom: $topComponentsDistance;
     padding: 0;
